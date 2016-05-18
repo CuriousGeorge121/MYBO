@@ -1,0 +1,150 @@
+
+<html>
+<head>
+	<title>XeroSource</title>
+    <link rel="stylesheet" type="text/css" href="styles/style1.css"/>
+    <meta name="viewpoint" content="width=device-width, initial-scale: 1.0, user-scalable=0"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script>
+        $(function() {
+            $( "#datepicker" ).datepicker();
+        });
+        $(function() {
+            $( "#datepicker2" ).datepicker();
+        });
+
+        $(function() {
+            $( "#accordion" ).accordion();
+        });
+        $(function() {
+            $( "#sortable" ).sortable();
+            $( "#sortable" ).disableSelection();
+        });
+
+        function showhide(id) {
+            var e = document.getElementById(id);
+            e.style.display = (e.style.display == 'block') ? 'none' : 'block';}
+    </script>
+
+
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>-->
+
+</head>
+<body>
+
+	<div id="header">
+    <div class="logo"><a href="#">OOO<span></span></a></div>
+    </div>
+
+    <a class=mobile href="#"></a>
+
+
+    <div id="container">
+        <div class="sidbar">
+            <ul id="nav">
+                <li><a href="DashboardSection">dashboard <img id="img" class="invert" src="Dashboard.png" alt="dashboard" height="auto" width="30px"></a> </li>
+                <li><a href="ApplyLeav.html">Apply Leave</a> </li>
+                <li><a href="#">stresser</a> </li>
+                <li><a href="#">friends</a> </li>
+                <li><a href="#">search</a> </li>
+                <li><a href="#">purchase</a> </li>
+
+            </ul>
+
+        </div>
+        <div class="content" style="float:right">
+            <h1>Dashboard</h1>
+
+
+            <div id="sortable">
+                <div id="box">
+                    <div class="box-top">Jane</div>
+                    <div class="box-panel">
+                        applied for sick leave on 3rd-5th nov
+                    </div>
+                </div>
+
+                <div id="box2">
+                    <div class="box-top">June</div>
+                    <div class="box-panel">
+                        applied for sick leave on 20rd-21th nov
+                    </div>
+                </div>
+                <div id="box3">
+                    <div class="box-top">June</div>
+                    <div class="box-panel">
+                        applied for sick leave on 20rd-21th nov
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </div>
+    </div>
+
+<</d id="dashboard">
+
+    <img class="imgA1" src="images/contact.png" alt="dashboard" height="auto" width="5%">
+    <img class="imgB1"  src="images/contact.png" alt="dashboard" height="auto" width="5%">
+
+
+</div>
+
+
+    <a href="javascript:showhide('uniquename')">
+        submit a leave request
+    </a>
+
+    <div id="uniquename" style="display:none;">
+    <div id="LeaveSection">
+
+        <div id="bottom">
+            <table style="width:50%">
+                <tr>
+                    <td>leave start date</td>
+                    <td>End of leave date</td>
+
+                </tr>
+                <tr>
+
+                    <td><p>Date: <input type="text" id="datepicker"></p></td>
+                    <td><p>Date: <input type="text" id="datepicker2"></p></td>
+
+                </tr>
+            </table>
+
+            <form action="action_page.php">
+                <textarea name="message" rows="3" cols="50">I am unable to go because I have to go to a wedding</textarea>
+                <br>
+                <input type="submit">
+            </form>
+
+            <form action="action_page.php"
+                  oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+                0
+                <input type="range" id="a" name="a" value="50">
+                100 +
+                <input type="number" id="b" name="b" value="50">
+                =
+                <output name="x" for="a b"></output>
+                <br><br>
+                <input type="submit">
+            </form>
+        </div>
+    </div>
+
+
+<div id="graph">
+
+</div>
+</div>
+
+
+
+</body>
+
+</html>

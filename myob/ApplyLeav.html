@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles/style2.css">
+    <link href="styles/datepicker.css" rel="stylesheet" type="text/css"/>
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        $(function() {
+            $( "#datepicker" ).datepicker({
+//                inline: true,
+//                showOtherMonths: true,
+//                dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+            });
+        });
+        $(function() {
+            $( "#datepicker2" ).datepicker();
+        });
+        </script>
+</head>
+<script type="text/javascript" src="http://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<script type="text/javascript">
+    window.onload = function () {CanvasJS.addColorSet("greenShades",
+            [//colorSet Array
+
+                "#ffcc00",
+                "#333333",
+            ]);
+        var chart = new CanvasJS.Chart("chartContainer",
+                {
+                    colorSet: "greenShades",
+                    title:{
+                        text: "Leave hours"
+                    },
+                    data: [
+                        {
+                                type: "doughnut",
+                            dataPoints: [
+                                {  y: 50, indexLabel: "Available" },
+                                {  y: 30, indexLabel: "Used" }
+                            ]
+                        }
+                    ]
+                });
+
+        chart.render();
+    }
+</script>
+
+
+<body>
+
+
+
+<div id="header">
+    <div class="logo">HR Essentials<span></span></div>
+</div>
+
+
+<div class="aParent">
+    <div id="tile">
+        <img id="img" src="images/tony.jpg" alt="Smiley face"height="150" width="auto">
+        <p id="contact_text">Name</p>
+        <p id="contact_text1">occupation</p>
+        <p id="contact_text2" >employee id</p>
+    </div>
+
+    <div id="tile2">
+        <p id="sick_day">Sick Day Request</p>
+        <p id="start_date">leave start date</p>
+        <p id="start_date"><input type="text" id="datepicker"></p>
+        <p id="finish_date" >End of leave date</p>
+        <p id="start_date"><input type="text" id="datepicker2"></p>
+        <p id="description" >Description</p>
+        <form action="action_page.php">
+            <textarea id="start_date" name="message" rows="2" cols="50">reason for leave</textarea>
+            <br>
+            <input id="submit" type="submit">
+        </form>
+
+    </div>
+
+
+</div>
+
+<table id="table" border="1" style="width:100%">
+
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td height="100" bgcolor="#ffcc00" valign="bottom">14:00 </td>
+        <td bgcolor="#ffcc00"></td>
+        <td></td>
+    </tr> <!--top yello tiles   -->
+    <tr>
+        <td height="200" bgcolor="#ffcc00" valign="top">15:00 </td>
+        <td bgcolor="#ffcc00"></td>
+        <td bgcolor="#ffcc00"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr> <!--bottom yellow tiles   -->
+    <tr>
+        <td bgcolor="#333333"style=color:#f1f1f1;>Monday</td>
+        <td bgcolor="#333333"style=color:#f1f1f1;>Tuesday</td>
+        <td bgcolor="#333333"style=color:#f1f1f1;>Wednesday</td>
+        <td bgcolor="#333333"style=color:#f1f1f1;>Thursday</td>
+        <td bgcolor="#333333"style=color:#f1f1f1;>Friday</td>
+        <td bgcolor="#333333"style=color:#f1f1f1;>Saturday</td>
+        <td bgcolor="#333333"style=color:#f1f1f1;>Sunday</td>
+    </tr> <!--days of week   -->
+
+</table>
+<div id="graph">
+    <div id="chartContainer"  style="height: 360px; width: 500px;" >
+</div>
+
+
+
+
+
+
+</div>
+</body>
+</html>
